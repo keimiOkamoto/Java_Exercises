@@ -1,9 +1,0 @@
-javadoc -d docs *.java
- to make java doc
-
-
-________________________________
-Unit testing:
-Keimis-MacBook-Air:src keimiokamoto$ java -cp :/Users/keimiokamoto/Documents/Java_lib/JUNIT/junit-4.10.jar Comparator
-
-Keimis-MacBook-Air:src keimiokamoto$ java -cp :/Users/keimiokamoto/Documents/Java_lib/JUNIT/junit-4.10.jar org.junit.runner.JUnitCore Comparator
