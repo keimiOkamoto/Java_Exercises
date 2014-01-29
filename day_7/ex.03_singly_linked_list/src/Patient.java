@@ -34,11 +34,9 @@ public class Patient {
 	*@param name of patient being removed
 	*/
 	public void remove(String name) {
-		if (!next.getName().equals(name) && next == null) {
+		if (!next.getName().equals(name)) {
 			System.out.println("Name not found");
-		}
-
-		if (next.getPatientName().equals(name)) {
+		} else if (next.getName().equals(name)) {
 			next = next.next;
 		}else {
 			next.remove(name);

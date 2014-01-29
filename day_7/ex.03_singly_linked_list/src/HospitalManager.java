@@ -24,12 +24,8 @@ public class HospitalManager {
 	public void removePatientFromList(String name) {
 		if (head == null) {
 			System.out.println("Error no patients in the list.");
-		} else if (head.getNext() == null) { // if there is only 1 node delete and the name matcher
-			if (head.getName().equals(name)) {
-				head = null;	
-			} else {
-				System.out.println("Error patient does not exist");
-			}
+		} else if (head.getName().equals(name)) { // if there is only 1 node delete and the name matcher
+			head = head.getNext();
 		} else {
 			head.remove(name);
 		}
