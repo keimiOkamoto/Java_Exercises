@@ -25,5 +25,5 @@ public class Hospital {
 		
 		System.out.println("After remove...");
 		aHmanager.printList();
-	}	
+	}
 }
