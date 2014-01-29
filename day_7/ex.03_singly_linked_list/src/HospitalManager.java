@@ -4,7 +4,7 @@
 */
 public class HospitalManager {
 	private Patient head;
-	
+	public static int patientCount;
 	/**
 	* Adds a patient to the list
 	*@param aPatient

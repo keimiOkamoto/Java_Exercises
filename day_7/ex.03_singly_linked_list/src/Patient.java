@@ -24,6 +24,7 @@ public class Patient {
 	public void add(Patient aPatient) {
 		if (next == null) {
 			next = aPatient;
+			HospitalManager.patientCount++;
 		} else {
 			next.add(aPatient);
 		}
@@ -38,6 +39,7 @@ public class Patient {
 			System.out.println("Name not found");
 		} else if (next.getName().equals(name)) {
 			next = next.next;
+			HospitalManager.patientCount--;
 		}else {
 			next.remove(name);
 		}

@@ -14,16 +14,17 @@ public class Hospital {
 		aHmanager.addPatientToList(new Patient("Brad" ,"Broken leg"));
 		aHmanager.addPatientToList(new Patient("Carl" ,"Broken chin"));
 		aHmanager.addPatientToList(new Patient("Dean" ,"Bad back"));
-		//aHmanager.addPatientToList(new Patient("Eric" ,"Huge knee"));
-		//aHmanager.addPatientToList(new Patient("Frank" ,"Massive Elbow"));
+		aHmanager.addPatientToList(new Patient("Eric" ,"Huge knee"));
+		aHmanager.addPatientToList(new Patient("Frank" ,"Massive Elbow"));
 		aHmanager.printList();
 		aHmanager.removePatientFromList("Brad");
 		aHmanager.removePatientFromList("Adam");
-		//aHmanager.removePatientFromList("Adam");
-		//aHmanager.removePatientFromList("Dean");
+		aHmanager.removePatientFromList("Adam");
+		aHmanager.removePatientFromList("Dean");
 		aHmanager.removePatientFromList("Barry");
-		
 		System.out.println("After remove...");
 		aHmanager.printList();
+		
+		System.out.println(HospitalManager.patientCount);
 	}
 }
