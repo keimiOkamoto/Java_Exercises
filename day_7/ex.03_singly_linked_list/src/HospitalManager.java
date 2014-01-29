@@ -2,7 +2,6 @@
 * Hospital manager class responsible for adding and deleting patient to the list
 * Day 7 practice-singly linked-list
 */
-
 public class HospitalManager {
 	private Patient head;
 	
@@ -23,14 +22,20 @@ public class HospitalManager {
 	*@param name
 	*/
 	public void removePatientFromList(String name) {
-		if (head.getPatientName().equals(name)) {
-			head = head.getNext();
+		if (head == null) {
+			System.out.println("Error no patients in the list.");
+		} else if (head.getNext() == null) { // if there is only 1 node delete and the name matcher
+			if (head.getName().equals(name)) {
+				head = null;	
+			} else {
+				System.out.println("Error patient does not exist");
+			}
 		} else {
 			head.remove(name);
 		}
 	}
 
-	/*
+	/**
 	* Prints the list out
 	*/
 	public void printList() {

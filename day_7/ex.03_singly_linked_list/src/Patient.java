@@ -4,7 +4,6 @@
 */
 public class Patient {
 	private Patient next = null;
-	private Patient temp = null;
 	private String name;
 	private String illness;
 
@@ -16,7 +15,6 @@ public class Patient {
 	public Patient(String name, String illness) {
 		this.name = name;
 		this.illness = illness;
-		this.temp = this;
 	} 
 
 	/**
@@ -36,30 +34,31 @@ public class Patient {
 	*@param name of patient being removed
 	*/
 	public void remove(String name) {
+		if (!next.getName().equals(name) && next == null) {
+			System.out.println("Name not found");
+		}
+
 		if (next.getPatientName().equals(name)) {
-			temp = next;
 			next = next.next;
-			temp.next = null;
-			temp = this;
-		} else {
+		}else {
 			next.remove(name);
 		}
 	}
 
-	/*
+	/**
 	* Print method for the list
 	*/
 	public void print() {
 		if (next == null) {
-			System.out.println(this.getPatientName());
+			System.out.println(this.getName());
 		} else {
-			System.out.println(this.getPatientName());
+			System.out.println(this.getName());
 			next.print();
 		}
 	}
 
 	/**
-	* Getter for patient name
+	* Getter for patient
 	* @return the next patient
 	*/
 	public Patient getNext() {
@@ -67,10 +66,18 @@ public class Patient {
 	}
 
 	/**
+	* Getter for patient
+	* @param a patient
+	*/
+	public void setNext(Patient aPatient) {
+		this.next = aPatient;
+	}
+
+	/**
 	* Getter for patient name
 	* @return patient name
 	*/
-	public String getPatientName() {
+	public String getName() {
 		return this.name;
 	}
 
@@ -78,7 +85,7 @@ public class Patient {
 	* Getter for patient illness
 	* @return patient illness
 	*/
-	public String getPatientIllness() {
+	public String getIllness() {
 		return this.illness;
 	}
 }
