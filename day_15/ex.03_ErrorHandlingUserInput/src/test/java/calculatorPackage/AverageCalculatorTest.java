@@ -10,7 +10,7 @@ public class AverageCalculatorTest {
 	@Test 
 	public void shouldBeAbleToInputTenNumbers() {
 		Calculator aCalculator = new CalculatorImpl();
-		int[] actual = aCalculator.inputNumbers(5);
+		int[] actual = aCalculator.inputNumbers();
 		int[] expected = {1,2,3,4,5,6,7,8,9,0};
 
 		assertEquals(actual, expected);
