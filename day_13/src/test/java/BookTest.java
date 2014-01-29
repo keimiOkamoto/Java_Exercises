@@ -12,8 +12,7 @@ public class BookTest {
 		expected1 = "Bye";
 		aBook = new Book(expected, expected1);
 	} 
-
-	//auther 
+	//author 
 	@Test
 	public void shouldBeAbleToGetAnAuthor() {
 		String actual = aBook.getAuthor();
@@ -25,7 +24,6 @@ public class BookTest {
 
 		assertEquals(expected1, actual1);
 	}
-
 	//title
 	@Test
 	public void shouldBeAbleToGetATitle() {
@@ -33,8 +31,8 @@ public class BookTest {
 
 		assertEquals(expected1, actual);
 
-		String expected2 = "flub";
-		Book aBook2 = new Book("Ryan", expected2);
+		String expected2 = "The book of Ham";
+		Book aBook2 = new Book("The book of Beef", expected2);
 		String actual2 = aBook2.getTitle();
 		
 		assertEquals(expected2, actual2);
