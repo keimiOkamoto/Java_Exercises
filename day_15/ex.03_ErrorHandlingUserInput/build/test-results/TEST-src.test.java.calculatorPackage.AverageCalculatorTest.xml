@@ -1,7 +1,0 @@
-<?xml version="1.1" encoding="UTF-8"?>
-<testsuite name="src.test.java.calculatorPackage.AverageCalculatorTest" tests="1" failures="0" errors="0" timestamp="2014-01-27T19:59:03" hostname="Keimis-MacBook-Air.local" time="0.001">
-  <properties/>
-  <testcase name="shouldBeAbleToGetAverage" classname="src.test.java.calculatorPackage.AverageCalculatorTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
