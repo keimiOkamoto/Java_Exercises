@@ -1,7 +1,7 @@
 public class SmartPhone extends MobilePhone {
 	
 	public SmartPhone(String aBrand) {
-		//super(aBrand);
+		super(aBrand);
 		System.out.println("Super smartphone being called ");
 	}
 

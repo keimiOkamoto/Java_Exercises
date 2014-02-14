@@ -1,10 +1,12 @@
 public class OldPhone implements Phone {
 	private String brand = null;
 
+	
 	public OldPhone() {
 		System.out.println("Super Old Phone being called ");
 	}
-
+	
+	
 	public OldPhone(String brand){
 		this.brand = brand;
 		System.out.println("Old Phone brand constructor being called ");

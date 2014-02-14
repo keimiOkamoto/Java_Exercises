@@ -9,13 +9,13 @@ public class Factorial {
 			return 1;
 		}  else {
 			int result = factorialGenerator(x - 1) ;
-			result = x*result;
+			result = x * result;
 			return result;
 		}
 	}
 
 	public static void main (String[] args) {
 		Factorial a = new Factorial();
-		System.out.println(a.factorialGenerator(8));
+		System.out.println(a.factorialGenerator(4));
 	}
 }
