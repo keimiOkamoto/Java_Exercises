@@ -32,7 +32,7 @@ public class MillisecondOutput implements Runnable {
 	private void launch(int milliSec) {
 		try {
 			Thread.sleep(milliSec);
-			
+
 			String print = (launchFirstIdentifier == true) ?  "Finished task " + this.id +":  " : "Finished task " + thread_id;
 			System.out.println(print);
 			launchFirstIdentifier = false;
@@ -53,6 +53,7 @@ public class MillisecondOutput implements Runnable {
 		synchronized(obj) {
 			String print = (runFirstIdentifier == true) ? "Enter the duration (in ms) of task "+ this.id +":  " : "Enter the duration (in ms) of task "+ (thread_id)+":  ";
 			System.out.println(print);
+			
 			String input = System.console().readLine();
 			milliSec = Integer.parseInt(input);	
 			runFirstIdentifier = false;
