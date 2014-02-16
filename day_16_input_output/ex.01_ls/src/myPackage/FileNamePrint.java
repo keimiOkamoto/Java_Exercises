@@ -10,9 +10,8 @@ import java.io.*;
 public class FileNamePrint {
 
 	public static void main(String[] args) {
-		File path = new File(".");
+		File path = new File("." + File.separator);
 		String[] list; 
-
 		list = path.list();
 
 		for (String a : list) {
