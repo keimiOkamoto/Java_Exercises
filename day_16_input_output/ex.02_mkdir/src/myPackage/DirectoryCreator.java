@@ -12,7 +12,7 @@ public class DirectoryCreator {
 	/**
 	* main method that takes an argument at the command line.
 	* the user enters a name and the directory will be made.
-	*@param args arry for directories. 
+	* @param args Array for directories. 
 	*/
 	public static void main (String[] args) {
 		for (int x = 0; x < args.length; x++ ) {
