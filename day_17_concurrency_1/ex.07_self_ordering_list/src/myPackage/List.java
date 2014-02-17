@@ -17,12 +17,15 @@ package myPackage;
 
 public interface List {
 /**
-* adds new integer to list
+* Adds new integer to list
+* @param aNumber 
 */
 void add(Integer aNumber);
 
 /**
-* takes  a reference ID and returns the Integer
+* Takes  a reference ID and returns the Integer
+* @param positionRef
+* @return Integer
 */
 Integer get(int positionRef);
 

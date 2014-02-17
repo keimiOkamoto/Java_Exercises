@@ -22,26 +22,41 @@ public class Node {
 	private int id;
 
 	/**
-	* constructor
-	* @param aInteger 
+	* constructor sets Integer and ID number
+	* @param aInteger number 
 	*/
 	public Node(Integer aInteger) {
 		this.aInteger = aInteger;
 		this.id = count++;
 	}
-
+	/**
+	* Gets the next node.
+	* @return the next node
+	*/
 	public Node getNext() {
 		return next;
 	}
 
+	/**
+	* Gets the ID of the node
+	* @return ID of the node
+	*/
 	public int getId() {
 		return id;
 	}
 
+	/**
+	* Gets the integer value	
+	* @return Integer value 
+	*/
 	public Integer getInteger() {
 		return aInteger;
 	}
 
+	/**
+	* Sets the next node to a newNode
+	* @param newNode replaces next
+	*/
 	public void setNext(Node newNode) {
 		next = newNode;
 	}

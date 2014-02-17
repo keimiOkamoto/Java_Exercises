@@ -16,6 +16,9 @@
 package myPackage;
 
 public class ListContainer {
+	/**
+	* Main method to create the list
+	*/
 	public static void main (String[] args ) {
 		IntegerList aList = new IntegerList();
 		aList.add(new Integer(21));

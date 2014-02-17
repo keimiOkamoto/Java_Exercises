@@ -17,6 +17,7 @@ package myPackage;
 
 public class IntegerList implements List {
 	Node firstNode = null;
+	
 	/**
 	* Calls addNext() and creates a new node to be added.
 	* @param aNumber Integer taken in for the newNode
@@ -42,15 +43,28 @@ public class IntegerList implements List {
 			addNext(firstNode.getNext(), newNode);
 		}
 	}
-	
-	public Integer get(int positionref) {
+
+	/**
+	* Returns the Integer of the node if it exists
+	* @param positionRef Position ID is taken in.
+	* @return Integer
+	*/
+	public Integer get(int positionRef) {
 		return firstNode.getId();
 	}
 
+	/**
+	* Calls printNext() to prin the contents of the list.
+	*/
 	public void print() {
 		printNext(firstNode);
 	}
 
+	/**
+	* Recursivly searches for the end of the list and prints the 
+	* contents of the list
+	* @param firstNode
+	*/
 	private void printNext(Node firstNode) {
 		if (firstNode == null) {
 			return;
