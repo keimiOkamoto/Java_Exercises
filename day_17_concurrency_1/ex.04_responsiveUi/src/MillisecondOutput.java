@@ -11,7 +11,7 @@ import java.io.Console;
 public class MillisecondOutput implements Runnable {
 	private int id;
 	private static int threadCount = 11;
-	private final int thread_id = threadCount--;
+	private final int THREAD_ID = threadCount--;
 	private static boolean runFirstIdentifier=true;
 	private static boolean launchFirstIdentifier =true;
 	private static Object obj = new Object();
@@ -33,7 +33,7 @@ public class MillisecondOutput implements Runnable {
 		try {
 			Thread.sleep(milliSec);
 
-			String print = (launchFirstIdentifier == true) ?  "Finished task " + this.id +":  " : "Finished task " + thread_id;
+			String print = (launchFirstIdentifier == true) ?  "Finished task " + this.id +":  " : "Finished task " + THREAD_ID;
 			System.out.println(print);
 			launchFirstIdentifier = false;
 		
@@ -51,7 +51,7 @@ public class MillisecondOutput implements Runnable {
 		int milliSec  = 0;
 		
 		synchronized(obj) {
-			String print = (runFirstIdentifier == true) ? "Enter the duration (in ms) of task "+ this.id +":  " : "Enter the duration (in ms) of task "+ (thread_id)+":  ";
+			String print = (runFirstIdentifier == true) ? "Enter the duration (in ms) of task "+ this.id +":  " : "Enter the duration (in ms) of task "+ (THREAD_ID)+":  ";
 			System.out.println(print);
 			
 			String input = System.console().readLine();
