@@ -29,6 +29,7 @@ public class Node {
 		this.aInteger = aInteger;
 		this.id = count++;
 	}
+
 	/**
 	* Gets the next node.
 	* @return the next node
@@ -59,5 +60,15 @@ public class Node {
 	*/
 	public void setNext(Node newNode) {
 		next = newNode;
+	}
+
+	@Override
+	public String toString() {
+
+		if (this.next == null) {
+			return "" + this.getInteger();
+		} else {
+			return "" + this.getInteger() + ", "+ getNext();
+		}
 	}
 }

@@ -15,33 +15,25 @@
 */
 package myPackage;
 
-public class IntegerList implements List, Runnable {
+public class IntegerList implements List {
 	private Node firstNode = null;
-	private boolean notSorted = false;
-	private IntegerList aList = new IntegerList();
+	private 	static boolean notSorted = false;
+	//private IntegerList aList = new IntegerList();
 	
 	/**
 	* Calls addNext() and creates a new node to be added.
 	* @param aNumber Integer taken in for the newNode
 	*/
-	public synchronized void add(Integer aNumber) {
+	public void add(Integer aNumber) {
 		Node newNode = new Node(aNumber);
-		if (notSorted) {
-			try {
-				wait();
-				
-			} catch (InterruptedException ex) {
-				System.out.println("Interrupted! : ( ");
-			}
-		}  else {
-			if (firstNode == null && !notSorted) {
+		
+			if (firstNode == null) {
 				firstNode = newNode;
 				System.out.println("Not Sorted.");
-				notSorted = true;
+				//notSorted = true;
 			} else {
 				addNext(firstNode, newNode);
 			}
-		}
 
 	}
 
@@ -74,7 +66,7 @@ public class IntegerList implements List, Runnable {
 	* Calls printNext() to prin the contents of the list.
 	*/
 	public void print() {
-		printNext(firstNode);
+		System.out.println(firstNode);
 	}
 
 	/**
@@ -92,12 +84,13 @@ public class IntegerList implements List, Runnable {
 		}
 
 	}
-
+	/*
 	public void run() {
 		aList.add(new Integer(21));
 		//aList.add(new Integer(42));
 		//aList.add(new Integer(33));
 	}
+	*/
 }
 
 
