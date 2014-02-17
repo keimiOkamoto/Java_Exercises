@@ -20,10 +20,7 @@ public class ListContainer {
 	* Main method to create the list
 	*/
 	public static void main (String[] args ) {
-		IntegerList aList = new IntegerList();
-		aList.add(new Integer(21));
-		aList.add(new Integer(42));
-		aList.add(new Integer(33));
-		aList.print();
+		Thread t1 = new Thread(new IntegerList());
+		t1.start();
 	}
 }

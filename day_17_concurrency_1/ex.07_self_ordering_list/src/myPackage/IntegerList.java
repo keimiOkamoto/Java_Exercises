@@ -15,21 +15,36 @@
 */
 package myPackage;
 
-public class IntegerList implements List {
-	Node firstNode = null;
+public class IntegerList implements List, Runnable {
+	private Node firstNode = null;
+	private boolean notSorted = false;
+	private IntegerList aList = new IntegerList();
 	
 	/**
 	* Calls addNext() and creates a new node to be added.
 	* @param aNumber Integer taken in for the newNode
 	*/
-	public void add(Integer aNumber) {
+	public synchronized void add(Integer aNumber) {
 		Node newNode = new Node(aNumber);
-		if (firstNode == null) {
-			firstNode = newNode;
-		} else {
-			addNext(firstNode, newNode);
+		if (notSorted) {
+			try {
+				wait();
+				
+			} catch (InterruptedException ex) {
+				System.out.println("Interrupted! : ( ");
+			}
+		}  else {
+			if (firstNode == null && !notSorted) {
+				firstNode = newNode;
+				System.out.println("Not Sorted.");
+				notSorted = true;
+			} else {
+				addNext(firstNode, newNode);
+			}
 		}
+
 	}
+
 	/**
 	* Recursivly searches for the end of the list and inserts the
 	* new node to the end. The 'firstNode' is repaced by the 
@@ -39,6 +54,8 @@ public class IntegerList implements List {
 	private void addNext(Node firstNode, Node newNode) {
 		if (firstNode.getNext() == null) {
 			firstNode.setNext(newNode);
+			System.out.println("Not Sorted.");
+			notSorted = true;
 		} else {
 			addNext(firstNode.getNext(), newNode);
 		}
@@ -74,6 +91,12 @@ public class IntegerList implements List {
 			printNext(firstNode.getNext());
 		}
 
+	}
+
+	public void run() {
+		aList.add(new Integer(21));
+		//aList.add(new Integer(42));
+		//aList.add(new Integer(33));
 	}
 }
 
