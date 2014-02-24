@@ -3,7 +3,7 @@
 *
 * Exercise to practice TDD
 */
-public class LibraryMember implements Member{
+public class LibraryMember implements Member {
 
 	private String name;
 	private int id;
@@ -20,7 +20,7 @@ public class LibraryMember implements Member{
 	* Returns the member name.
 	*@return String
 	*/
-	public String getMemberName(){
+	public String getMemberName() {
 		return name;
 	}
 

@@ -10,7 +10,7 @@ public class BookTest {
 	private Book aBook;
 	private String expected;
 	private String expected1;
-
+	
 	@Before
 	public void setup() {
 		expected = "Hi ";

@@ -30,7 +30,7 @@ public class LibraryMemberTest {
 	}
 
 	@Test
-	public void shouldBeAbleToSetId() {
+	public void shouldBeAbleToSetUniqueId() {
 		int expected = 5;
 		aLibrayMember.setId(5);
 		int actual = aLibrayMember.getId();

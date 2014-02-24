@@ -20,7 +20,7 @@ public class Book {
 	* Retruns the name of the Author
 	*@return author
 	*/
-	public String getAuthor(){
+	public String getAuthor() {
 		return author;
 	}
 
@@ -28,7 +28,7 @@ public class Book {
 	*Returns the Book Title
 	*@return String 
 	*/
-	public String getTitle(){
+	public String getTitle() {
 		return title;
 	}
 }
