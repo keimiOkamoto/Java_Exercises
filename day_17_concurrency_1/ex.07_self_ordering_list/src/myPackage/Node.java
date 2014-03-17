@@ -62,6 +62,9 @@ public class Node {
 		next = newNode;
 	}
 
+	/**
+	* @return 
+	*/
 	@Override
 	public String toString() {
 

@@ -5,11 +5,11 @@
 
 public class Executor {
 	private Runnable aRunnable = new Runnable();
-	private ArrayList<Thread> aList = new ArrayList<>();
+	private static ArrayList<Thread> aList = new ArrayList<>();
 
-
+	//allocates one thread to each task  and if the task is not idel the task is put into a list
 	public void execute (Runnable aRunnable) {
-
+		if ()
 	}
 
 }

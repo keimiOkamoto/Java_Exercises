@@ -46,7 +46,7 @@ public class IntegerList implements List {
 	private void addNext(Node firstNode, Node newNode) {
 		if (firstNode.getNext() == null) {
 			firstNode.setNext(newNode);
-			System.out.println("Not Sorted.");
+			//System.out.println("Not Sorted.");
 			notSorted = true;
 		} else {
 			addNext(firstNode.getNext(), newNode);

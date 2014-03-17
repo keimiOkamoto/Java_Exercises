@@ -24,7 +24,7 @@ public class FileSearchMachine {
 				BufferedReader in = new BufferedReader(new FileReader(file));
 				String line ;
 				while ((line = in.readLine()) != null) {
-					System.out.println(line);	
+					System.out.println(line);
 				}
 			}  else {
 				throw new FileNotFoundException();
