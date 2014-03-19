@@ -26,7 +26,7 @@ public class EchoClient {
 			Remote service = Naming.lookup("//127.0.0.1:1099/Echo");
 			EchoService echoService = (EchoService) service;
 			
-			String message = "I've replied!";
+			String message = "some love ";
 			System.out.println("Sending " + message + " to server.");
 			String receivedEcho = echoService.echo(message);
 			System.out.println("The server has replied with " + receivedEcho);
@@ -35,9 +35,7 @@ public class EchoClient {
 			DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 	   		Date receivedDate = echoService.getDate();
 
-	   		System.out.println("The server has replied with " + receivedDate + " Woop!");
-
-
+	   		System.out.println("The server said the date is " + receivedDate + " Woop!");
 
 		} catch (NotBoundException ex) {
 			ex.printStackTrace();

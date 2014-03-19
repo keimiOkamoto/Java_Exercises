@@ -15,7 +15,8 @@ public class EchoServer extends UnicastRemoteObject implements EchoService {
 
 	@Override
 	public String echo(String s) {
-		System.out.println("Replied to some client saying '" + s + "'.");
+		System.out.println("Server here, i'm going to send some " + s + "'.");
+		s = s + " xxxx";
 		return s;
 	}
 

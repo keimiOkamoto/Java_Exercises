@@ -32,6 +32,7 @@ public class EchoServerLauncher {
 			String registryHost = "//127.0.0.1/";
 			String serviceName = "Echo";
 			Naming.rebind(registryHost + serviceName, server);
+			
 		} catch (MalformedURLException ex) {
 			ex.printStackTrace();
 		} catch (RemoteException ex) {
